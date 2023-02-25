@@ -11,31 +11,23 @@ public class Notas {
 		System.out.print("Introduzca el valor de una calificación: ");
 		nota = reader.nextInt();
 		
-		mensaje = califica(nota);
+		mensaje = Notas2.califica(nota);
 		
 		System.out.println(mensaje);
 		reader.close();
 		}
 
 	/**
-	 * @deprecated Use {@link #califica(int)} instead
+	 * @deprecated Use {@link Notas2#califica(int)} instead
 	 */
 	public static String cali(int nota) {
-		return califica(nota);
+		return Notas2.califica(nota);
 	}
 
+	/**
+	 * @deprecated Use {@link Notas2#califica(int)} instead
+	 */
 	public static String califica(int num_nota) {
-		String mensaje;
-		if (num_nota >= 0 && num_nota < 5)
-		mensaje = "Suspenso";
-		else if (num_nota >= 5 && num_nota < 7)
-		mensaje = "Aprobado";
-		else if (num_nota >= 7 && num_nota <9)
-		mensaje = "Notable";
-		else if (num_nota >= 9 && num_nota <= 10)
-		mensaje = "Sobresaliente";
-		else
-		mensaje = "El valor de la calificación introducida no es correcta";
-		return mensaje;
+		return Notas2.califica(num_nota);
 	}
 }
